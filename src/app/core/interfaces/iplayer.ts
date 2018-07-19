@@ -14,4 +14,5 @@ export interface IPlayer {
   // Cooldowns
   // Buffs
   // Nerfs
+  isDead: boolean;
 }
