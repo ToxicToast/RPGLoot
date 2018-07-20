@@ -170,7 +170,7 @@ export class Items {
     this.generatedItem = <IItem>{};
   }
 
-  public createItem(): void {
+  public createItem(): IItem {
     const rarities = [];
     rarities.push(Rarities.COMMON);
     rarities.push(Rarities.MAGIC);
@@ -183,7 +183,7 @@ export class Items {
     const affixNumber = Math.floor(Math.random() * rarities.length) + 1;
     //
     this.randomItem(randomslot, affixNumber, randomaffix, rarities);
-    console.error(this.generatedItem);
+    return this.generatedItem;
   }
 
   private randomItem(slot: number, affixnumber: number, randomaffix: number, rarities: string[]) {
